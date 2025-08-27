@@ -4,7 +4,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/NichtStudioCode/InvUI)
 ![License](https://img.shields.io/github/license/NichtStudioCode/InvUI)
 
-# InvUI
+# InvUI Minestom
 
 ## Don't expect it to be perfect
 I have done my best to test and fix any issues I have come across, but there may be some inconsistencies from the spigot version. I cannot guarantee support, but I will try :)
