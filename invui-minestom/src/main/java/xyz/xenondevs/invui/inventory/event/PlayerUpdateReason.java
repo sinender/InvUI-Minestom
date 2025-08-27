@@ -1,0 +1,25 @@
+package xyz.xenondevs.invui.inventory.event;
+
+
+import net.minestom.server.entity.Player;
+import net.minestom.server.event.trait.InventoryEvent;
+
+public class PlayerUpdateReason implements UpdateReason {
+    
+    private final Player player;
+    private final InventoryEvent event;
+    
+    public PlayerUpdateReason(Player player, InventoryEvent event) {
+        this.player = player;
+        this.event = event;
+    }
+    
+    public Player getPlayer() {
+        return player;
+    }
+    
+    public InventoryEvent getEvent() {
+        return event;
+    }
+    
+}

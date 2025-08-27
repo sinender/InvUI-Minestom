@@ -6,15 +6,15 @@
     <parent>
         <groupId>xyz.xenondevs.invui</groupId>
         <artifactId>invui-parent</artifactId>
-        <version>1.46</version>
+        <version>1.49</version>
     </parent>
 
     <artifactId>invui-kotlin</artifactId>
 
     <properties>
         <kotlin.version>1.8.20</kotlin.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -24,20 +24,20 @@
             <version>${kotlin.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.19.3-R0.1-SNAPSHOT</version>
+            <groupId>net.minestom</groupId>
+            <artifactId>minestom-snapshots</artifactId>
+            <version>CHUNKBATCH-LOCKING-JAM-2</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>xyz.xenondevs.invui</groupId>
-            <artifactId>invui-core</artifactId>
+            <artifactId>invui-minestom</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>net.kyori</groupId>
             <artifactId>adventure-api</artifactId>
-            <version>4.12.0</version>
+            <version>4.23.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
