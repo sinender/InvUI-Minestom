@@ -40,6 +40,15 @@ Supports 1.21.8
 </dependency>
 ```
 
+## Gradle
+```groovy
+implementation 'llc.redstone:invui-minestom:VERSION'
+```
+## Gradle (Kotlin DSL)
+```kotlin
+implementation("llc.redstone:invui-minestom:VERSION")
+```
+
 Check out the [InvUI documentation](https://xenondevs.xyz/docs/invui/) for more information.
 
 ## Examples
