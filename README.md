@@ -1,13 +1,16 @@
-![Logo](https://i.imgur.com/bFqCsuj.png)
+![Logo](https://i.imgur.com/WLwyr1x.png)
 
 [![Stars](https://img.shields.io/github/stars/NichtStudioCode/InvUI?color=ffa200)](https://github.com/NichtStudioCode/InvUI/stargazers)
 ![GitHub issues](https://img.shields.io/github/issues/NichtStudioCode/InvUI)
 ![License](https://img.shields.io/github/license/NichtStudioCode/InvUI)
 
-# InvUI
+# InvUI Minestom
 
-An Inventory API for Minecraft Spigot servers.  
-Supports all versions from 1.14.0 to 1.21.8.
+## Don't expect it to be perfect
+I have done my best to test and fix any issues I have come across, but there may be some inconsistencies from the spigot version. I cannot guarantee support, but I will try :)
+
+An Inventory API for Minestom servers.
+Supports 1.21.8
 
 [Documentation](https://xenondevs.xyz/docs/invui/)
 
