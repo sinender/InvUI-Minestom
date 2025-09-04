@@ -3,13 +3,30 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>xyz.xenondevs.invui</groupId>
-        <artifactId>invui-parent</artifactId>
-        <version>1.49</version>
-    </parent>
-
+    <groupId>llc.redstone</groupId>
+    <version>1.49</version>
     <artifactId>invui-kotlin</artifactId>
+    <name>InvUI Minestom</name>
+    <description>Inventory UI library for Minestom</description>
+    <url>https://github.com/sinender/InvUI-Minestom</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://raw.githubusercontent.com/sinender/InvUI-Minestom/refs/heads/main/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:https://github.com/sinender/InvUI-Minestom.git</connection>
+        <developerConnection>scm:git:https://github.com/sinender/InvUI-Minestom.git</developerConnection>
+        <url>https://github.com/sinender/InvUI-Minestom</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>Sin Ender</name>
+            <email>ender@redstone.llc</email>
+        </developer>
+    </developers>
 
     <properties>
         <kotlin.version>1.8.20</kotlin.version>
@@ -25,12 +42,12 @@
         </dependency>
         <dependency>
             <groupId>net.minestom</groupId>
-            <artifactId>minestom-snapshots</artifactId>
-            <version>CHUNKBATCH-LOCKING-JAM-2</version>
+            <artifactId>minestom</artifactId>
+            <version>2025.08.18-1.21.8</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>xyz.xenondevs.invui</groupId>
+            <groupId>llc.redstone</groupId>
             <artifactId>invui-minestom</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -58,6 +75,78 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <classifier>javadoc</classifier>
+                            <classesDirectory>${project.build.directory}/javadoc</classesDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>1.8.20</version>
+                <executions>
+                    <execution>
+                        <id>generate-javadoc</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>dokka</goal>
+                        </goals>
+                        <configuration>
+                            <outputFormat>javadoc</outputFormat>
+                            <outputDirectory>${project.build.directory}/javadoc</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.2.8</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.8.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                </configuration>
             </plugin>
         </plugins>
     </build>

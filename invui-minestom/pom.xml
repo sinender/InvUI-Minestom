@@ -4,14 +4,30 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>xyz.xenondevs.invui</groupId>
-        <artifactId>invui-parent</artifactId>
-        <version>1.49</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
-
+    <groupId>llc.redstone</groupId>
     <artifactId>invui-minestom</artifactId>
+    <version>1.49</version>
+    <name>InvUI Minestom</name>
+    <description>Inventory UI library for Minestom</description>
+    <url>https://github.com/sinender/InvUI-Minestom</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://raw.githubusercontent.com/sinender/InvUI-Minestom/refs/heads/main/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:https://github.com/sinender/InvUI-Minestom.git</connection>
+        <developerConnection>scm:git:https://github.com/sinender/InvUI-Minestom.git</developerConnection>
+        <url>https://github.com/sinender/InvUI-Minestom</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>Sin Ender</name>
+            <email>ender@redstone.llc</email>
+        </developer>
+    </developers>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
@@ -37,7 +53,60 @@
                     <target>16</target>
                 </configuration>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.11.3</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.2.8</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.8.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

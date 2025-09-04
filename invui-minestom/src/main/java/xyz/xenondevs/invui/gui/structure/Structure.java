@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 
 /**
  * Provides an easy way to design {@link Gui}s.
- * Inspired by Bukkit's {@link ShapedRecipe}, {@link Structure Structures} will let you
+ * Inspired by Bukkit's ShapedRecipe, {@link Structure Structures} will let you
  * design a {@link Gui} in a similar way.
  */
 public class Structure implements Cloneable {

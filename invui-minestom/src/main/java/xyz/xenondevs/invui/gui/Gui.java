@@ -25,9 +25,9 @@ import java.util.function.Supplier;
  * Each {@link SlotElement} can either be an {@link Item},
  * a reference to a {@link Inventory}'s or another {@link Gui}'s
  * slot index.<br>
- * A {@link Gui} is not an {@link org.bukkit.inventory.Inventory}, nor does
+ * A {@link Gui} is not an {@link xyz.xenondevs.invui.inventory.Inventory}, nor does
  * it access one. It just contains {@link SlotElement SlotElements} and their positions.<br>
- * In order to create an {@link org.bukkit.inventory.Inventory} which is visible
+ * In order to create an {@link xyz.xenondevs.invui.inventory.Inventory} which is visible
  * to players, you will need to use a {@link Window}.
  *
  * @see PagedGui
@@ -262,7 +262,7 @@ public interface Gui {
     @NotNull Set<@NotNull Player> findAllCurrentViewers();
     
     /**
-     * Closes the open {@link org.bukkit.inventory.Inventory} for all viewers of {@link Window Windows}
+     * Closes the open {@link xyz.xenondevs.invui.inventory.Inventory} for all viewers of {@link Window Windows}
      * where this {@link Gui} is displayed.
      * <p>
      * If the {@link Window Windows} are not marked as "retain",

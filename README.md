@@ -26,18 +26,12 @@ Supports all versions from 1.14.0 to 1.21.8.
 * GUI Builder
 
 ## Maven
-
-```xml
-<repository>
-    <id>xenondevs</id>
-    <url>https://repo.xenondevs.xyz/releases</url>
-</repository>
-```
+[![](https://img.shields.io/maven-central/v/llc.redstone/invui-minestom)](https://mvnrepository.com/artifact/llc.redstone/invui-minestom)
 
 ```xml
 <dependency>
-    <groupId>xyz.xenondevs.invui</groupId>
-    <artifactId>invui</artifactId>
+    <groupId>llc.redstone</groupId>
+    <artifactId>invui-minestom</artifactId>
     <version>VERSION</version>
     <type>pom</type>
 </dependency>

@@ -4,7 +4,31 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>xyz.xenondevs.invui</groupId>
+    <name>InvUI Minestom</name>
+    <description>Inventory UI library for Minestom</description>
+    <url>https://github.com/sinender/InvUI-Minestom</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://raw.githubusercontent.com/sinender/InvUI-Minestom/refs/heads/main/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:https://github.com/sinender/InvUI-Minestom.git</connection>
+        <developerConnection>scm:git:https://github.com/sinender/InvUI-Minestom.git</developerConnection>
+        <url>https://github.com/sinender/InvUI-Minestom</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>NichtStudioCode + Contributors</name>
+        </developer>
+        <developer>
+            <name>Sin Ender</name>
+            <email>ender@redstone.llc</email>
+        </developer>
+    </developers>
+    <groupId>llc.redstone</groupId>
     <artifactId>invui-parent</artifactId>
     <version>1.49</version>
     <packaging>pom</packaging>
@@ -13,34 +37,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <profiles>
-        <profile>
-            <id>xenondevs-nms</id>
-            <repositories>
-                <repository>
-                    <id>xenondevs-nms</id>
-                    <url>https://repo.xenondevs.xyz/nms/</url>
-                </repository>
-            </repositories>
-        </profile>
-    </profiles>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>xenondevs</id>
-            <url>https://repo.xenondevs.xyz/releases</url>
-        </pluginRepository>
-    </pluginRepositories>
-
     <repositories>
-        <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-        <repository>
-            <id>minecraft-repo</id>
-            <url>https://libraries.minecraft.net/</url>
-        </repository>
         <repository>
             <id>codemc-maven-public</id>
             <url>https://repo.codemc.org/repository/maven-public/</url>
@@ -75,10 +72,10 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
-            </plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.10.1</version>
+        </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -99,17 +96,18 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.5</version>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.11.3</version>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.8.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <distributionManagement>
-        <repository>
-            <id>redstone-llc</id>
-            <url>https://repo.redstone.llc/releases</url>
-        </repository>
-    </distributionManagement>
-
 </project>

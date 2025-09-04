@@ -21,7 +21,6 @@ import java.util.function.Supplier;
  * {@link Window#split} and {@link Window#merged}.
  *
  * @see AnvilWindow
- * @see CartographyWindow
  */
 public interface Window {
     
@@ -397,7 +396,6 @@ public interface Window {
          * @see Window.Builder.Normal.Single
          * @see Window.Builder.Normal.Merged
          * @see AnvilWindow.Builder.Single
-         * @see CartographyWindow.Builder.Single
          */
         interface Single<W extends Window, S extends Single<W, S>> extends Builder<W, S> {
             
@@ -442,7 +440,6 @@ public interface Window {
          * @param <S> The builder type
          * @see Window.Builder.Normal.Split
          * @see AnvilWindow.Builder.Split
-         * @see CartographyWindow.Builder.Split
          */
         interface Double<W extends Window, S extends Builder.Double<W, S>> extends Builder<W, S> {
             
@@ -519,7 +516,6 @@ public interface Window {
          * @param <V> The viewer type
          * @param <S> The builder type
          * @see AnvilWindow.Builder
-         * @see CartographyWindow.Builder
          */
         interface Normal<V, S extends Normal<V, S>> extends Builder<Window, S> {
             
@@ -528,7 +524,6 @@ public interface Window {
              * for a normal {@link Window} with only one {@link Gui} that does not access the {@link Player Player's} inventory.
              *
              * @see AnvilWindow.Builder.Single
-             * @see CartographyWindow.Builder.Single
              */
             interface Single extends Builder.Normal<UUID, Single>, Builder.Single<Window, Single> {}
             
@@ -538,7 +533,6 @@ public interface Window {
              * {@link Player Player's} inventory.
              *
              * @see AnvilWindow.Builder.Split
-             * @see CartographyWindow.Builder.Split
              */
             interface Split extends Builder.Normal<Player, Split>, Builder.Double<Window, Split> {}
             
