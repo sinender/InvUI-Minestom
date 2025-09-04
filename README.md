@@ -28,8 +28,10 @@ Supports 1.21.8
 * GUI Animations
 * GUI Builder
 
-## Maven
+## Include in your project
 [![](https://img.shields.io/maven-central/v/llc.redstone/invui-minestom)](https://mvnrepository.com/artifact/llc.redstone/invui-minestom)
+<details open>
+<summary>Maven</summary>
 
 ```xml
 <dependency>
@@ -39,15 +41,22 @@ Supports 1.21.8
     <type>pom</type>
 </dependency>
 ```
+</details>
 
-## Gradle
+<details>
+<summary>Gradle (Groovy DSL)</summary>
+
 ```groovy
 implementation 'llc.redstone:invui-minestom:VERSION'
 ```
-## Gradle (Kotlin DSL)
+</details>
+<details>
+<summary>Gradle (Kotlin DSL)</summary>
+
 ```kotlin
 implementation("llc.redstone:invui-minestom:VERSION")
 ```
+</details>
 
 Check out the [InvUI documentation](https://xenondevs.xyz/docs/invui/) for more information.
 
